@@ -46,7 +46,7 @@ const tempProduct = fs.readFileSync(
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const productData = JSON.parse(data);
 
-const slugs = productData.map(el => slugify(el.productName, { lower: true }));
+const slugs = productData.map((el) => slugify(el.productName, { lower: true }));
 console.log(slugs);
 
 const server = http.createServer((req, resp) => {
